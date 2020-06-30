@@ -24,9 +24,9 @@ public class Runner
    * Strings that store the location of the database to connect to,
    * as well as the user name and password
    */
-  public static final String DB_LOCATION = "jdbc:mysql://db.cs.ship.edu:3306/csc371_08";
-  public static final String LOGIN_NAME = "csc371_08";
-  public static final String PASSWORD = "Password08";
+  public static final String DB_LOCATION = "url";
+  public static final String LOGIN_NAME = "login";
+  public static final String PASSWORD = "password";
   
   
   /**
@@ -40,25 +40,25 @@ public class Runner
     /**
      * Initialize the database with some tables and rows
      */
-    Runner runner = new Runner();
-    runner.dropAllTables();
-    runner.createAllTables();
-    runner.insertEverythingIntoTables();
+//    Runner runner = new Runner();
+//    runner.dropAllTables();
+//    runner.createAllTables();
+//    runner.insertEverythingIntoTables();
     
     /**
      * Create stored procedures
      */
-    Runner.createStoredProcedures4();
-    Runner.createStoredProcedures1();
+//    Runner.createStoredProcedures4();
+//    Runner.createStoredProcedures1();
     
     /**
      * Create instances of the UI displays
      */
-    DisplayThreeSQLHandler.setConnection(m_dbConn);
-    DisplayThreeSQLHandler.setStoredProcedures();
-    Display_1 display1 = new Display_1(m_dbConn);
+//    DisplayThreeSQLHandler.setConnection(m_dbConn);
+//    DisplayThreeSQLHandler.setStoredProcedures();
+//    Display_1 display1 = new Display_1(m_dbConn);
     DisplayThree display3 = DisplayThree.getInstance();
-    new Display_4(m_dbConn);
+//    new Display_4(m_dbConn);
     
     
     /**

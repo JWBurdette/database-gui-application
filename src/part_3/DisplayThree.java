@@ -1,3 +1,4 @@
+//Joshua Burdette
 package part_3;
 
 import javax.swing.*;
@@ -5,6 +6,7 @@ import javax.swing.border.LineBorder;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.util.Arrays;
 import java.util.Vector;
 
 /**
@@ -116,11 +118,16 @@ public class DisplayThree extends JFrame implements ActionListener
 		getContentPane().setBackground(new Color(230, 230, 230));
 		
 		
-		//FILL VECTORS
-		rooms = DisplayThreeSQLHandler.getRooms();
-		creaturesInRoom = DisplayThreeSQLHandler.getCreaturesInRoom(selectedRoomID);
-		itemsInRoom = DisplayThreeSQLHandler.getItemsInRoom(selectedRoomID);
-		allThatCanBeAddedToRoom = DisplayThreeSQLHandler.getAllThatCanBeAddedToRoom("CREATURE");
+		//FILL VECTORS 
+		//REPLACED WITH HARD-CODED ARRAYS FOR DEMONSTRATION PURPOSES
+//		rooms = DisplayThreeSQLHandler.getRooms();
+//		creaturesInRoom = DisplayThreeSQLHandler.getCreaturesInRoom(selectedRoomID);
+//		itemsInRoom = DisplayThreeSQLHandler.getItemsInRoom(selectedRoomID);
+//		allThatCanBeAddedToRoom = DisplayThreeSQLHandler.getAllThatCanBeAddedToRoom("CREATURE");
+		rooms = new Vector<String>(Arrays.asList("Room 1", "Room 2", "Room 3", "Room 4"));
+		creaturesInRoom = new Vector<String>(Arrays.asList("Knight", "Zombie", "Skeleton", "Bear"));
+		itemsInRoom = new Vector<String>(Arrays.asList("Sword", "Arrow", "Spear", "Hammer"));;
+		allThatCanBeAddedToRoom = new Vector<String>(Arrays.asList("Bat", "Dog", "Snake", "Dragon", "Eagle", "Lion"));;
 		
 		
 		//SET ALL LABELS
